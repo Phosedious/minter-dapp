@@ -7,8 +7,8 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "denemefrogs";
+const description = "denemefrogs for deneme";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
@@ -16,13 +16,39 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 5,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "background" },
+      { name: "backbody1" },
+      { name: "shoes" },
+      { name: "eye" },
+      { name: "eyelid" },
+      { name: "body1" },
+      { name: "shadows" },
+      { name: "head" },
+      { name: "pants" },
+      { name: "lefthanditem" },
+      { name: "dots" },
+      { name: "someclothes" },
+      { name: "righthanditem" },
+      { name: "gloves1" },
+      { name: "hat" },
+    ],
+  },{
+    growEditionSizeTo: 10,
+    layersOrder: [
+      { name: "background" },
+      { name: "backbody2" },
+      { name: "shoes" },
+      { name: "eye" },
+      { name: "eyelid" },
+      { name: "body2" },
+      { name: "shadows" },
+      { name: "head" },
+      { name: "pants" },
+      { name: "lefthanditem" },
+      { name: "dots" },
+      { name: "allclothes" },
+      { name: "gloves2" },
+      { name: "hat" },
     ],
   },
 ];
@@ -32,13 +58,13 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 550,
+  height: 600,
   smoothing: false,
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://denemefrogs.netlify.app", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -49,31 +75,31 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
-const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const TREASURY_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 1; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const CONTRACT_NAME = 'denemefrogs';
+const CONTRACT_SYMBOL = 'df';
+const METADATA_UPDATABLE = false; // set to false if you don't want to allow metadata updates after minting
+const OWNER_ADDRESS = '0x80F643b52920536940CA5C2740e27A9a8D2787d0';
+const TREASURY_ADDRESS = '0x80F643b52920536940CA5C2740e27A9a8D2787d0';
+const MAX_SUPPLY = 11; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
+const MINT_PRICE = 0.03; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 2; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-06-19T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
-const BASE_URI = null; // only update if you want to manually set the base uri
+const ROYALTY_ADDRESS = "0x80F643b52920536940CA5C2740e27A9a8D2787d0"; // Address that will receive the royalty
+const BASE_URI = "ipfs://bafybeigsjhv4ygclkjp4uwejtvx63wo6rcbzz5vjiprotenxxvzrj6ossq/"; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
-let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually include it
+let CONTRACT_ADDRESS = "0x4465c82BA8d4A31aeeC726C6e86C9D965fAAe660"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
-const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
+const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
 const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
 const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
