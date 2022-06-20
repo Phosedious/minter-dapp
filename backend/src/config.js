@@ -91,12 +91,12 @@ const PUBLIC_MINT_START_DATE = "2022-06-19T11:30:48+00:00"; // This is required.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
 const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
 const ROYALTY_ADDRESS = "0x80F643b52920536940CA5C2740e27A9a8D2787d0"; // Address that will receive the royalty
-const BASE_URI = "ipfs://bafybeigsjhv4ygclkjp4uwejtvx63wo6rcbzz5vjiprotenxxvzrj6ossq/"; // only update if you want to manually set the base uri
+const BASE_URI ="ipfs://bafybeigsjhv4ygclkjp4uwejtvx63wo6rcbzz5vjiprotenxxvzrj6ossq/"; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
 
 // ** OPTIONAL **
-let CONTRACT_ADDRESS = "0x4465c82BA8d4A31aeeC726C6e86C9D965fAAe660"; // If you want to manually include it
+let CONTRACT_ADDRESS = "0xf9002fEF99f83a106Db4449C8F315DB83067344b"; // If you want to manually include it
 
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = false; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
